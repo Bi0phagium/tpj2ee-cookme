@@ -1,0 +1,21 @@
+body
+{
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	min-width: 1000px;
+	max-width: 1360px;
+	font-family: Arial;
+}
+
+#container
+{
+	display: block;
+	margin: 20px;
+	padding: 0px;
+}
+
+a, a:hover, a:focus, a:visited
+{
+	outline: none;
+}
