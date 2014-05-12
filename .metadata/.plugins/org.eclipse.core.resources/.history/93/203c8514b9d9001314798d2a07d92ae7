@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<title>Inscription</title>
+</head>
+<body>
+	<div id="container">
+
+		<h:form id="form" method="post" action="inscription.html">
+
+			<fieldset>
+				<legend>Registration</legend>
+				<table border="0">
+					<tr class="inscriptionForm">
+
+						<td class="inscription">First name :</td>
+						<td><h:inputText class="inscription" name="lastname"
+								value="#{user.lastname}" required="true" />
+								  <f:validator validatorId="validators.name" /></td>
+					</tr>
+
+					<tr class="inscriptionForm">
+						<td class="inscription">Last name :</td>
+						<td><h:inputText class="inscription" name="surname"
+								value="#{user.surname}" required="true" />
+								<f:validator validatorId="validators.name" /></td></td>
+					</tr>
+
+					<tr class="inscriptionForm">
+						<td class="inscription">Age :</td>
+						<td><h:inputText class="inscription" name="age"
+								value="#{user.age}" required="true" />
+								<f:validator validatorId="validators.age" /></td></td>
+					</tr>
+
+					<tr class="inscriptionForm">
+						<td class="inscription">Mail address :</td>
+						<td><h:inputText class="inscription" name="mail"
+								value="#{user.mail}" required="true" />
+								<f:validator validatorId="validators.mail" /></td></td>
+					</tr>
+
+					<tr class="inscriptionForm">
+						<td class="inscription">Login :</td>
+						<td><h:inputText class="inscription" name="login"
+								value="#{user.pwd}" required="true" />
+								<f:validator validatorId="validators.login" /></td></td>
+					</tr>
+
+					<tr class="inscriptionForm">
+						<td class="inscription">Password :</td>
+						<td><h:inputSecret class="inscription" name="pwd"
+								type="password" value="#{user.pwd}" required="true" /></td>
+					</tr>
+
+					<tr class="inscriptionForm">
+						<td class="inscription">Password :</td>
+						<td><h:inputSecret class="inscription" name="pwdConfirmation"
+								type="password" value="#{user.pwdConfirmation}" required="true" />
+								<f:validator validatorId="validators.pwd" /></td></td>
+					</tr>
+
+					<tr class="inscriptionForm">
+					</tr>
+					<!--
+				<input type="reset" value="Reset" /> 
+				<input class="inscriptionSub"
+					type="submit" value="Register" /> -->
+					<tr>
+						<td></td>
+						<td><h:commandButton class="inscriptionSub" value="Reset"
+								action="#" />
+								 <h:commandButton
+								class="inscriptionSub" value="Register"
+								action="#{user.checkAndAddUser(user)}" /></td>
+					</tr>
+
+
+				</table>
+			</fieldset>
+
+		</h:form>
+
+	</div>
+</body>
+</html>

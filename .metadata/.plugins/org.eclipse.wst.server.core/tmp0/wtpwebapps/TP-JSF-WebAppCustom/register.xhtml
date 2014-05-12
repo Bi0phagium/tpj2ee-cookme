@@ -18,31 +18,36 @@
 
 						<td class="inscription">First name :</td>
 						<td><h:inputText class="inscription" name="lastname"
-								value="#{user.lastname}" required="true" /></td>
+								value="#{user.lastname}" required="true" />
+								  <f:validator validatorId="validators.name" /></td>
 					</tr>
 
 					<tr class="inscriptionForm">
 						<td class="inscription">Last name :</td>
 						<td><h:inputText class="inscription" name="surname"
-								value="#{user.surname}" required="true" /></td>
+								value="#{user.surname}" required="true" />
+								<f:validator validatorId="validators.name" /></td>
 					</tr>
 
 					<tr class="inscriptionForm">
 						<td class="inscription">Age :</td>
 						<td><h:inputText class="inscription" name="age"
-								value="#{user.age}" required="true" /></td>
+								value="#{user.age}" required="true" />
+								<f:validator validatorId="validators.age" /></td>
 					</tr>
 
 					<tr class="inscriptionForm">
 						<td class="inscription">Mail address :</td>
 						<td><h:inputText class="inscription" name="mail"
-								value="#{user.mail}" required="true" /></td>
+								value="#{user.mail}" required="true" />
+								<f:validator validatorId="validators.mail" /></td>
 					</tr>
 
 					<tr class="inscriptionForm">
 						<td class="inscription">Login :</td>
 						<td><h:inputText class="inscription" name="login"
-								value="#{user.pwd}" required="true" /></td>
+								value="#{user.pwd}" required="true" />
+								<f:validator validatorId="validators.login" /></td>
 					</tr>
 
 					<tr class="inscriptionForm">
@@ -54,7 +59,8 @@
 					<tr class="inscriptionForm">
 						<td class="inscription">Password :</td>
 						<td><h:inputSecret class="inscription" name="pwdConfirmation"
-								type="password" value="#{user.pwdConfirmation}" required="true" /></td>
+								type="password" value="#{user.pwdConfirmation}" required="true" />
+								<f:validator validatorId="validators.pwd" /></td>
 					</tr>
 
 					<tr class="inscriptionForm">
