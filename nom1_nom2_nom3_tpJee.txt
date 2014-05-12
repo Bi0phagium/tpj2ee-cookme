@@ -1,0 +1,8 @@
+faire un zip
+
+faire un readme
+	nom
+	ce que tout le monde a fait
+	point non abouti
+
+mettre la base de données(faire un dump)
