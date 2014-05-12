@@ -23,11 +23,7 @@ import step4.model.UserSubmissionModelBean;
 // l'ensemble des clients
 public class UserControlerBean {
 	private UserDao userDao;
-	private static final String USERNAME_PATTERN = "^[_A-Za-z0-9-@]+";
 	
-	private Pattern pattern;
-	private Matcher matcher;
-
 	public UserControlerBean() {
 		this.userDao = DaoFabric.getInstance().createUserDao();
 	}

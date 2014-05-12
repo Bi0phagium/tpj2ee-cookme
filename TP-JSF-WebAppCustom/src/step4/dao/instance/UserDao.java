@@ -36,16 +36,16 @@ public class UserDao {
 			query = connection.createStatement();
 
 			// Executer puis parcourir les résultats
-			String sql = "INSERT INTO `binome32`.`UserTestTP` (`surname`, `lastname`, `age`, `login`, `pwd`) VALUES ('"
+			String sql = "INSERT INTO `user` (`surname`, `lastname`, `age`, `mail`, `login`, `pwd`) VALUES ('"
 					+ user.getSurname()
 					+ "', '"
 					+ user.getLastname()
 					+ "', '"
 					+ user.getAge()
 					+ "', '"
-					+ user.getLogin()
+					+ user.getMail()
 					+ "', '"
-					+ user.getPwd() + "');";
+					+ user.getLogin() + "', '" + user.getPwd() + "');";
 			int rs = query.executeUpdate(sql);
 			query.close();
 			connection.close();
@@ -70,14 +70,13 @@ public class UserDao {
 			query = connection.createStatement();
 
 			// Executer puis parcourir les résultats
-			java.sql.ResultSet rs = query
-					.executeQuery("SELECT * FROM UserTestTP");
+			java.sql.ResultSet rs = query.executeQuery("SELECT * FROM user");
 			while (rs.next()) {
 				// Création de l'utilisateur
 				UserModelBean user = new UserModelBean(
 						rs.getString("lastname"), rs.getString("surname"),
-						rs.getInt("age"), rs.getString("login"),
-						rs.getString("pwd"));
+						rs.getInt("age"), rs.getString("mail"),
+						rs.getString("login"), rs.getString("pwd"));
 				System.out.println("User : " + user);
 
 				// ajout de l'utilisateur récupéré à la liste
@@ -107,7 +106,7 @@ public class UserDao {
 
 			// Executer puis parcourir les résultats
 			java.sql.ResultSet rs = query
-					.executeQuery("SELECT * FROM UserTestTP where login='"
+					.executeQuery("SELECT * FROM user where login='"
 							+ login + "' and pwd='" + pwd + "';");
 
 			if (!rs.next()) {
@@ -115,9 +114,9 @@ public class UserDao {
 			} else {
 				// Création de l'utilisateur
 				UserModelBean user = new UserModelBean(
-				rs.getString("lastname"), rs.getString("surname"),
-				rs.getInt("age"), rs.getString("login"),
-				rs.getString("pwd"));
+						rs.getString("lastname"), rs.getString("surname"),
+						rs.getInt("age"), rs.getString("mail"), rs.getString("login"),
+						rs.getString("pwd"));
 				System.out.println("User Login : " + user);
 				return user;
 			}

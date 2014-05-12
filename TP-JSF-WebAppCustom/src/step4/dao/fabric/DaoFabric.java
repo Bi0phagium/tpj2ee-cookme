@@ -14,7 +14,7 @@ public final class DaoFabric {
 
 	private String DB_HOST = "localhost";
 	private String DB_PORT = "3306";
-	private String DB_NAME = "binome32";
+	private String DB_NAME = "cookme";
 	private String DB_USER = "root";
 	private String DB_PWD = "";
 
