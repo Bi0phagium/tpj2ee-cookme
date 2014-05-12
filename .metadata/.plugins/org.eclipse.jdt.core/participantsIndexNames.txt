@@ -1,0 +1,5 @@
+INDEX VERSION 1.126
+C:\Workspace\Ecole\WebService\tpj2ee-cookme\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3442682479.index
+\TP-JSF-WebAppCustom\src
+C:\Workspace\Ecole\WebService\tpj2ee-cookme\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1874103553.index
+\TP-JSF-WebAppCustom\src

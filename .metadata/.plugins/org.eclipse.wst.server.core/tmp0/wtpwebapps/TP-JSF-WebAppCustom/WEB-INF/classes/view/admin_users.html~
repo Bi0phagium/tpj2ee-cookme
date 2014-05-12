@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Youyou les champignons | Inscription</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" media="screen" title="Default" href="_common.css" />
+		<link rel="stylesheet" type="text/css" media="screen" title="Default" href="_header.css" />
+		<link rel="stylesheet" type="text/css" media="screen" title="Default" href="_footer.css" />
+		<link rel="stylesheet" type="text/css" media="screen" title="Default" href="admin_users.css" />
+	</head>
+	<body>
+		
+		<!-- Header to include -->
+		<div id="header">
+			
+			<div id="loginBox">
+				Welcome, <b class="pseudo">Habziz</b>
+			</div>
+			
+			<div id="pageTitle" style="background-color:rgba(255,0,0,0.7);">
+				<!-- Page name -->
+				Administration
+				<!-- ENDOF[Page name] -->
+			</div>
+			
+			<div class="lastLogin">
+				Last connection 2014-07-26 17:14:58
+			</div>
+			
+		</div>
+		<!-- ENDOF[Header to include] -->
+		
+		<div id="container">
+			
+			<div id="form">
+				
+				<form method="post" action="admin_users">
+					<div class="form">
+						<label class="form">First name :</label>
+						<input class="form" name="prenom" />
+					</div>
+				
+					<div class="form">
+						<label class="form">Last name :</label>
+						<input class="form" name="nom" />
+					</div>
+				
+					<div class="form">
+						<label class="form">Age :</label>
+						<input class="form" name="age" />
+					</div>
+				
+					<div class="form">
+						<label class="form">Mail address :</label>
+						<input class="form" name="mail" />
+					</div>
+				
+					<div class="form">
+						<label class="form">Login :</label>
+						<input class="form" name="login" />
+					</div>
+				
+					<div class="form">
+						<label class="form">Password :</label>
+						<input class="form" name="mail" type="password" />
+					</div>
+				
+					<div class="form">
+						<label class="form">Password :</label>
+						<input class="form" name="mail" type="password" />
+					</div>
+				
+					<div class="form">
+					</div>
+				
+					<input type="reset" value="Reset" />
+					<input class="formSub" type="submit" value="Add" />
+					
+				</form>
+				
+			</div>
+			
+			<table id="table">
+				<tr>
+					<th>Name</th>
+					<th>Login</th>
+					<th>Admin</th>
+					<th>Action</th>
+				</tr>
+				<tr style="background-color: rgba(0,0,0,0.2)">
+					<td class="name">Clifford STRAUSSKAHN</td>
+					<td class="login">cliffy</td>
+					<td class="admin"><b style="color:red">no</b></td>
+					<td class="action">
+						<a class="delete" href="#">DEL</a>
+						<a class="edit" href="#">ED</a>
+					</td>
+				</tr>
+				<tr style="background-color: rgba(0,0,0,0.1)">
+					<td class="name">Clifford STRAUSSKAHN</td>
+					<td class="login">cliffy</td>
+					<td class="admin"><b style="color:green">yes</b></td>
+					<td class="action">
+						<a class="delete" href="#">DEL</a>
+						<a class="edit" href="#">ED</a>
+					</td>
+				</tr>
+			</table>
+			
+			<a class="add" href="#">Add</a>
+			
+		</div>
+		
+		<!-- Footer to include -->
+		<div id="footer">
+			
+			<div id="logo">
+				<b class="logoMe">ME</b>
+				<b class="logoCook">Cook</b>
+			</div>
+			
+			<div id="copyright">
+				Copyright &copy; 2014 Youyou-les-coquelicots inc.
+			</div>
+			
+		</div>
+		<!-- ENDOF[Footer to include] -->
+	</body>
+</html>

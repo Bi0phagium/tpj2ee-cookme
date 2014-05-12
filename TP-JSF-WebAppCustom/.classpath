@@ -16,5 +16,6 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/fox/Downloads/apache-tomcat-7.0.53.zip"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

@@ -1,0 +1,12 @@
+127.0.0.1 - - [12/May/2014:10:39:49 +0200] "GET / HTTP/1.1" 404 962
+127.0.0.1 - - [12/May/2014:10:39:51 +0200] "GET /TP-JSF-WebAppCustom/register.xhtml HTTP/1.1" 200 2537
+127.0.0.1 - - [12/May/2014:10:39:58 +0200] "GET /TP-JSF-WebAppCustom/register.jsf HTTP/1.1" 200 2356
+127.0.0.1 - - [12/May/2014:10:40:06 +0200] "POST /TP-JSF-WebAppCustom/register.jsf HTTP/1.1" 500 23462
+127.0.0.1 - - [12/May/2014:10:51:37 +0200] "GET / HTTP/1.1" 404 962
+127.0.0.1 - - [12/May/2014:10:51:42 +0200] "GET /TP-JSF-WebAppCustom/register.jsf HTTP/1.1" 200 2366
+127.0.0.1 - - [12/May/2014:10:51:46 +0200] "POST /TP-JSF-WebAppCustom/register.jsf HTTP/1.1" 200 2916
+127.0.0.1 - - [12/May/2014:10:51:48 +0200] "POST /TP-JSF-WebAppCustom/register.jsf HTTP/1.1" 200 2915
+127.0.0.1 - - [12/May/2014:10:51:49 +0200] "POST /TP-JSF-WebAppCustom/register.jsf HTTP/1.1" 200 2915
+127.0.0.1 - - [12/May/2014:10:51:49 +0200] "POST /TP-JSF-WebAppCustom/register.jsf HTTP/1.1" 200 2916
+127.0.0.1 - - [12/May/2014:10:51:58 +0200] "POST /TP-JSF-WebAppCustom/register.jsf HTTP/1.1" 200 2915
+127.0.0.1 - - [12/May/2014:10:52:01 +0200] "POST /TP-JSF-WebAppCustom/register.jsf HTTP/1.1" 200 2916
