@@ -46,7 +46,7 @@ public class UserControlerBean {
 		} else {
 
 			// redirect the current page
-			return "userLogin.xhtml";
+			return "connexion.xhtml";
 		}
 	}
 

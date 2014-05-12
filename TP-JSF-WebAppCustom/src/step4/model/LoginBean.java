@@ -5,7 +5,7 @@ import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
-@ManagedBean
+@ManagedBean(name="login")
 @RequestScoped
 public class LoginBean implements Serializable{
 	private String login;
