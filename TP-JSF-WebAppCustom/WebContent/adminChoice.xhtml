@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<title>Registration</title>
+</head>
+<body>
+	<div id="container">
+		<h:form class="adminForm" method="post" action="admin.html">
+			<fieldset>
+				<legend>Registration</legend>
+				<table border="0">
+					<tr class="form">
+
+						<td class="adminForm">Login</td>
+						<td><h:inputText class="adminForm" id="login"
+								name="login" value="#{login.login}" required="true">
+								<f:validator validatorId="validators.login" />
+							</h:inputText></td>
+						<td><h:message for="login" showDetail="true"
+								style="color:red" /></td>
+					</tr>
+					<tr class="form">
+
+						<td class="adminForm">Password</td>
+						<td><h:inputSecret class="adminForm" id="pwd"
+								name="pwd" value="#{login.pwd}" required="true">
+								<f:validator validatorId="validators.pwd" />
+							</h:inputSecret></td>
+						<td><h:message for="pwd" showDetail="true"
+								style="color:red" /></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td><h:commandButton class="subAdmin"
+								value="Login" action="#{userControlerBean.checkUser(login)}" /></td>
+					</tr>
+				</table>
+			</fieldset>
+		</h:form>
+	</div>
+</body>
+</html>
