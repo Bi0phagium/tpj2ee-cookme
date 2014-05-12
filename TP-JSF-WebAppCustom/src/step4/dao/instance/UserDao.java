@@ -107,8 +107,8 @@ public class UserDao {
 			// Executer puis parcourir les résultats
 			java.sql.ResultSet rs = query
 					.executeQuery("SELECT * FROM user where login='"
-							+ login + "' and pwd='" + pwd + "';");
-
+							+ login + "' and pwd='" + pwd + "' and admin=1;");
+			
 			if (!rs.next()) {
 				return null;
 			} else {

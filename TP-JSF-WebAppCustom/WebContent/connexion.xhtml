@@ -25,10 +25,10 @@
 					<tr class="form">
 
 						<td class="adminForm">Password</td>
-						<td><h:inputText class="adminForm" id="pwd"
+						<td><h:inputSecret class="adminForm" id="pwd"
 								name="pwd" value="#{login.pwd}" required="true">
 								<f:validator validatorId="validators.pwd" />
-							</h:inputText></td>
+							</h:inputSecret></td>
 						<td><h:message for="pwd" showDetail="true"
 								style="color:red" /></td>
 					</tr>
