@@ -17,5 +17,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/fox/Downloads/apache-tomcat-7.0.53.zip"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/primefaces-3.5.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
