@@ -11,7 +11,7 @@
 <h:body>
         <h1>List of recipes</h1>
         <p:dataGrid var="recipeTempo"
-                value="#{session.getAttribute('recipes').getRecipeList()}"
+                value="#{session.getAttribute('recipeList').getRecipeList()}"
                 columns="1" rows="3" paginator="true"
                 paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}">
                 <p:column>
