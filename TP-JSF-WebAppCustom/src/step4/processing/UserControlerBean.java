@@ -42,7 +42,7 @@ public class UserControlerBean {
 			sessionMap.put("loggedUser", user);
 
 			// redirect the current page
-			return "userdisplay.xhtml";
+			return "adminChoice.xhtml";
 		} else {
 
 			// redirect the current page
