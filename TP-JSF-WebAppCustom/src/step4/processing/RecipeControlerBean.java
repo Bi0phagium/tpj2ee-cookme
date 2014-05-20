@@ -38,7 +38,6 @@ public class RecipeControlerBean {
         
 	}
 	
-
 	public void loadAllRecipe(){
 		ArrayList<RecipeModel> list = this.recipeDao.getAllRecipes();
 		
@@ -66,7 +65,7 @@ public class RecipeControlerBean {
 	}
 
 	public int getNumberRecipe(){
-		return 0;
+		//return 0;
 		
 		return this.recipeList.getNumRecipe();
 		
