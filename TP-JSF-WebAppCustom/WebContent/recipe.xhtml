@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<title>Recipes</title>
+</head>
+<body>
+	<div id="container">
+		<fieldset>
+			<legend>Recipes</legend>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Title</th>
+						<th>Description</th>
+						<th>Expertise</th>
+						<th>People</th>
+						<th>Duration (minutes)</th>
+						<th>Type</th>
+					</tr>
+				</thead>
+				<tbody>
+					<h:outputText value="#{RecipeControlerBean.loadAllRecipe}"/>
+					
+					<h:outputText value="No recipe have been found"
+						rendered="#{RecipeControlerBean.getNumberRecipe == 0}"
+						style="font:red" />
+					  
+					<ui:repeat value="#{RecipeControlerBean.getAllRecipe}"
+						var="recipe">
+						<tr>
+							<td>
+								<h2>
+									<h:outputText value="#{recipe.title}" outcome="recipe" />
+								</h2>
+							</td>
+							<td><h:outputText value="#{recipe.description}"
+									outcome="recipe" /></td>
+							<td><h:outputText value="#{recipe.expertise}"
+									outcome="recipe" /></td>
+							<td><h:outputText value="#{recipe.nbpeople}"
+									outcome="recipe" /></td>
+							<td><h:outputText value="#{recipe.duration}"
+									outcome="recipe" /></td>
+							<td><h:outputText value="#{recipe.type}" outcome="recipe" />
+							</td>
+						</tr>
+					</ui:repeat>
+				</tbody>
+
+			</table>
+
+
+		</fieldset>
+	</div>
+</body>
+</html>

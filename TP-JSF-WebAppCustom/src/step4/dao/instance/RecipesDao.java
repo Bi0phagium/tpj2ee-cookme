@@ -71,7 +71,7 @@ public class RecipesDao {
 
 			// Executer puis parcourir les résultats
 			java.sql.ResultSet rs = query
-					.executeQuery("SELECT * FROM RecipeTestTP;");
+					.executeQuery("SELECT * FROM recipe;");
 			while (rs.next()) {
 				// Création de  la recette
 				RecipeModel recipe = new RecipeModel(

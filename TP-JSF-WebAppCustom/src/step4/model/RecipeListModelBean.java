@@ -22,5 +22,9 @@ public class RecipeListModelBean {
 	public List<RecipeModel> getRecipeList() {
 		return recipeList;
 	}
+	
+	public int getNumRecipe(){
+		return recipeList.size();
+	}
 
 }

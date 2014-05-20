@@ -1,6 +1,8 @@
 package step4.processing;
 
 import java.util.ArrayList;
+
+import java.util.List;
 import java.util.Map;
 
 import javax.faces.bean.ApplicationScoped;
@@ -13,17 +15,19 @@ import step4.dao.instance.RecipesDao;
 import step4.model.RecipeListModelBean;
 import step4.model.RecipeModel;
 
-@ManagedBean
+
+@ManagedBean(name="RecipeControlerBean")
 @ApplicationScoped
 
 public class RecipeControlerBean {
 	private RecipesDao recipeDao;
+	private RecipeListModelBean recipeList;
 	
 	public RecipeControlerBean() {
 		this.recipeDao=DaoFabric.getInstance().createRecipesDao();
 	}
 	
-	
+
 	public void loadAllRecipe(){
 		ArrayList<RecipeModel> list = this.recipeDao.getAllRecipes();
 		
@@ -38,7 +42,22 @@ public class RecipeControlerBean {
 		Map<String, Object> sessionMap = externalContext.getSessionMap();
 		
 		//place la liste de recette dans l'espace de mémoire de JSF
+		
 		sessionMap.put("recipeList", recipeList);
+		this.recipeList = recipeList;
+		
+	}
+
+	public List<RecipeModel> getAllRecipe(){
+		
+		return this.recipeList.getRecipeList();
+		
+	}
+
+	public int getNumberRecipe(){
+		return 0;
+		
+		return this.recipeList.getNumRecipe();
 		
 	}
 
