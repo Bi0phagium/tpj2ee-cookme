@@ -1,0 +1,47 @@
+#container
+{
+	display: block;
+	width: 950px;
+	height: 550px;
+	margin: 20px auto 20px auto;
+	padding: 0px;
+}
+
+.blockLink
+{
+	display: block;
+	width: 300px;
+	height: 348px;
+	margin: 0px;
+	padding: 200px 0px 0px 0px;
+	text-align: center;
+	border: 1px solid rgb(100,100,100);
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+	font-weight: bold;
+	text-decoration: none;
+	color: rgb(50,50,50);
+	font-size: 30px;
+}
+
+.blockLink:hover
+{
+	color: black;
+	border: 1px solid black;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+}
+
+#linkEmergency
+{
+	background-color: orange;
+	float: left;
+}
+#linkRecipes
+{
+	background-color: rgba(0,0,255,0.7);
+	margin: auto;
+}
+#linkShop
+{
+	background-color: rgba(100,255,100,0.7);
+	float: right;
+}

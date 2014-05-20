@@ -5,8 +5,57 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 <head>
 <title>Recipes</title>
+<link rel="stylesheet" type="text/css" media="screen" title="Default"
+	href="WEB-INF/css/_common.css" />
+<link rel="stylesheet" type="text/css" media="screen" title="Default"
+	href="WEB-INF/css/_header.css" />
+<link rel="stylesheet" type="text/css" media="screen" title="Default"
+	href="WEB-INF/css/_footer.css" />
+<link rel="stylesheet" type="text/css" media="screen" title="Default"
+	href="WEB-INF/css/recipes.css" />
 </head>
 <body>
+	<!-- Header to include -->
+	<div id="header">
+
+		<div id="loginBox">
+
+			<form class="loginForm" method="post" action="inscription.html">
+				<div class="loginBox">
+					<label class="loginBox">Login</label> <input class="loginBox"
+						type="text" name="login" />
+				</div>
+				<div class="loginBox">
+					<label class="loginBox">Password</label> <input class="loginBox"
+						type="password" name="password" />
+				</div>
+				<input class="subloginBox" type="submit" name="subLogin"
+					value="Login" /> <a id="becomeMember" href="inscription.html">Become
+					a member</a>
+			</form>
+
+			<!--
+				Welcome, <b class="pseudo">Habziz</b><br />
+				<b class="userNumber">26845684</b> users are already connected
+				<a class="logout" href="logout.html">Logout</a>
+				-->
+		</div>
+
+		<div id="pageTitle" style="background-color: rgba(0, 0, 255, 0.7);">
+			<!-- Page name -->
+			Recipes
+			<!-- ENDOF[Page name] -->
+		</div>
+
+		<!--
+			<div class="loginResult success">
+				Connection success
+			</div>
+			-->
+		<div class="loginResult fail">Connection fail</div>
+
+	</div>
+	<!-- ENDOF[Header to include] -->
 	<div id="container">
 		<fieldset>
 			<legend>Recipes</legend>
@@ -23,25 +72,31 @@
 					</tr>
 				</thead>
 				<tbody>
-				-<h:outputText value="#{RecipeControlerBean.loadAllRecipe()}" />-
-					-<h:outputText value="#{session.getAttribute('test')}"/>-
-					
-					
+					-
+					<h:outputText value="#{RecipeControlerBean.loadAllRecipe()}" />
+					- -
+					<h:outputText value="#{session.getAttribute('test')}" />
+					-
+
+
 					<h:outputText value="#{session.getAttribute('test')}"
 						style="font:red" />
-						
-						
+
+
 					<h:outputText value="No recipe have been found"
 						rendered="#{RecipeControlerBean.getNumberRecipe() == 0}"
 						style="font:red" />
-						
+
 					<h:outputText value="some recipes have been found"
 						rendered="#{RecipeControlerBean.getNumberRecipe() != 0}"
 						style="font:red" />
-						
-					  -<h:outputText value="#{RecipeControlerBean.getNumberRecipe()}" />-
-					  -<h:outputText value="#{RecipeControlerBean.getNumberRecipe()}" />-
-					  
+
+					-
+					<h:outputText value="#{RecipeControlerBean.getNumberRecipe()}" />
+					- -
+					<h:outputText value="#{RecipeControlerBean.getNumberRecipe()}" />
+					-
+
 					<ui:repeat value="#{RecipeControlerBean.getAllRecipe()}"
 						var="recipe">
 						<tr>

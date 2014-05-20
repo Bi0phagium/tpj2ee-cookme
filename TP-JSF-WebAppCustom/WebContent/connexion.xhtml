@@ -5,8 +5,34 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 <head>
 <title>Registration</title>
+<link rel="stylesheet" type="text/css" media="screen" title="Default"
+	href="WEB-INF/css/_common.css" />
+<link rel="stylesheet" type="text/css" media="screen" title="Default"
+	href="WEB-INF/css/_header.css" />
+<link rel="stylesheet" type="text/css" media="screen" title="Default"
+	href="WEB-INF/css/_footer.css" />
+<link rel="stylesheet" type="text/css" media="screen" title="Default"
+	href="WEB-INF/css/admin_users.css" />
 </head>
 <body>
+	<!-- Header to include -->
+	<div id="header">
+
+		<div id="loginBox">
+			Welcome, <b class="pseudo">Habziz</b>
+		</div>
+
+		<div id="pageTitle" style="background-color: rgba(255, 0, 0, 0.7);">
+			<!-- Page name -->
+			Administration
+			<!-- ENDOF[Page name] -->
+		</div>
+
+		<div class="lastLogin">Last connection 2014-07-26 17:14:58</div>
+
+	</div>
+	<!-- ENDOF[Header to include] -->
+
 	<div id="container">
 		<h:form class="adminForm" method="post" action="admin.html">
 			<fieldset>
@@ -15,8 +41,8 @@
 					<tr class="form">
 
 						<td class="adminForm">Login</td>
-						<td><h:inputText class="adminForm" id="login"
-								name="login" value="#{login.login}" required="true">
+						<td><h:inputText class="adminForm" id="login" name="login"
+								value="#{login.login}" required="true">
 								<f:validator validatorId="validators.login" />
 							</h:inputText></td>
 						<td><h:message for="login" showDetail="true"
@@ -25,22 +51,33 @@
 					<tr class="form">
 
 						<td class="adminForm">Password</td>
-						<td><h:inputSecret class="adminForm" id="pwd"
-								name="pwd" value="#{login.pwd}" required="true">
+						<td><h:inputSecret class="adminForm" id="pwd" name="pwd"
+								value="#{login.pwd}" required="true">
 								<f:validator validatorId="validators.pwd" />
 							</h:inputSecret></td>
-						<td><h:message for="pwd" showDetail="true"
-								style="color:red" /></td>
+						<td><h:message for="pwd" showDetail="true" style="color:red" /></td>
 					</tr>
 
 					<tr>
 						<td></td>
-						<td><h:commandButton class="subAdmin"
-								value="Login" action="#{userControlerBean.checkUser(login)}" /></td>
+						<td><h:commandButton class="subAdmin" value="Login"
+								action="#{userControlerBean.checkUser(login)}" /></td>
 					</tr>
 				</table>
 			</fieldset>
 		</h:form>
 	</div>
+	<!-- Footer to include -->
+	<div id="footer">
+
+		<div id="logo">
+			<b class="logoMe">ME</b> <b class="logoCook">Cook</b>
+		</div>
+
+		<div id="copyright">Copyright &copy; 2014 Youyou-les-coquelicots
+			inc.</div>
+
+	</div>
+	<!-- ENDOF[Footer to include] -->
 </body>
 </html>

@@ -5,8 +5,58 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 <head>
 <title>Registration</title>
+<link rel="stylesheet" type="text/css" media="screen" title="Default"
+	href="WEB-INF/css/_common.css" />
+<link rel="stylesheet" type="text/css" media="screen" title="Default"
+	href="WEB-INF/css/_header.css" />
+<link rel="stylesheet" type="text/css" media="screen" title="Default"
+	href="WEB-INF/css/_footer.css" />
+<link rel="stylesheet" type="text/css" media="screen" title="Default"
+	href="WEB-INF/css/inscription.css" />
 </head>
 <body>
+	<!-- Header to include -->
+	<div id="header">
+
+		<div id="loginBox">
+
+			<form class="loginForm" method="post" action="inscription.html">
+				<div class="loginBox">
+					<label class="loginBox">Login</label> <input class="loginBox"
+						type="text" name="login" />
+				</div>
+				<div class="loginBox">
+					<label class="loginBox">Password</label> <input class="loginBox"
+						type="password" name="password" />
+				</div>
+				<input class="subloginBox" type="submit" name="subLogin"
+					value="Login" /> <a id="becomeMember" href="inscription.html">Become
+					a member</a>
+			</form>
+
+			<!--
+				Welcome, <b class="pseudo">Habziz</b><br />
+				<b class="userNumber">26845684</b> users are already connected
+				<a class="logout" href="logout.html">Logout</a>
+				-->
+		</div>
+
+		<div id="pageTitle" style="background-color: rgba(0, 0, 0, 0.3);">
+			<!-- Page name -->
+			Inscription
+			<!-- ENDOF[Page name] -->
+		</div>
+
+		<div class="loginResult success">Connection success</div>
+		<!--
+			<div class="loginResult fail">
+				Connection fail
+			</div>
+			-->
+
+	</div>
+	<!-- ENDOF[Header to include] -->
+
 	<div id="container">
 
 		<h:form id="form" method="post" action="inscription.html">
@@ -17,20 +67,22 @@
 					<tr class="inscriptionForm">
 
 						<td class="inscription">First name :</td>
-						<td><h:inputText class="inscription" id="lastname" name="lastname"
-								value="#{user.lastname}" required="true">
+						<td><h:inputText class="inscription" id="lastname"
+								name="lastname" value="#{user.lastname}" required="true">
 								<f:validator validatorId="validators.name" />
 							</h:inputText></td>
-							<td><h:message for="lastname" showDetail="true" style="color:red" /></td>
+						<td><h:message for="lastname" showDetail="true"
+								style="color:red" /></td>
 					</tr>
 
 					<tr class="inscriptionForm">
 						<td class="inscription">Last name :</td>
-						<td><h:inputText class="inscription" id="surname" name="surname"
-								value="#{user.surname}" required="true">
+						<td><h:inputText class="inscription" id="surname"
+								name="surname" value="#{user.surname}" required="true">
 								<f:validator validatorId="validators.name" />
 							</h:inputText></td>
-							<td><h:message for="surname" showDetail="true" style="color:red" /></td>
+						<td><h:message for="surname" showDetail="true"
+								style="color:red" /></td>
 					</tr>
 
 					<tr class="inscriptionForm">
@@ -39,7 +91,7 @@
 								value="#{user.age}" required="true">
 								<f:validator validatorId="validators.age" />
 							</h:inputText></td>
-							<td><h:message for="age" showDetail="true" style="color:red" /></td>
+						<td><h:message for="age" showDetail="true" style="color:red" /></td>
 					</tr>
 
 					<tr class="inscriptionForm">
@@ -48,7 +100,7 @@
 								value="#{user.mail}" required="true">
 								<f:validator validatorId="validators.mail" />
 							</h:inputText></td>
-							<td><h:message for="mail" showDetail="true" style="color:red" /></td>
+						<td><h:message for="mail" showDetail="true" style="color:red" /></td>
 					</tr>
 
 					<tr class="inscriptionForm">
@@ -57,7 +109,8 @@
 								value="#{user.login}" required="true">
 								<f:validator validatorId="validators.login" />
 							</h:inputText></td>
-						<td><h:message for="login" showDetail="true" style="color:red" /></td>
+						<td><h:message for="login" showDetail="true"
+								style="color:red" /></td>
 					</tr>
 
 					<tr class="inscriptionForm">
@@ -88,7 +141,8 @@
 						<td></td>
 						<td><h:commandButton class="inscriptionSub" value="Reset"
 								action="#" /> <h:commandButton class="inscriptionSub"
-								value="Register" action="#{userControlerBean.checkAndAddUser(user)}" /></td>
+								value="Register"
+								action="#{userControlerBean.checkAndAddUser(user)}" /></td>
 					</tr>
 
 
@@ -98,5 +152,18 @@
 		</h:form>
 
 	</div>
+
+	<!-- Footer to include -->
+	<div id="footer">
+
+		<div id="logo">
+			<b class="logoMe">ME</b> <b class="logoCook">Cook</b>
+		</div>
+
+		<div id="copyright">Copyright &copy; 2014 Youyou-les-coquelicots
+			inc.</div>
+
+	</div>
+	<!-- ENDOF[Footer to include] -->
 </body>
 </html>
