@@ -23,11 +23,23 @@
 					</tr>
 				</thead>
 				<tbody>
-					<h:outputText value="#{RecipeControlerBean.loadAllRecipe}"/>
+					-<h:outputText value="#{session.getAttribute('test')}"/>-
 					
+					
+					<h:outputText value="#{session.getAttribute('test')}"
+						style="font:red" />
+						
+						
 					<h:outputText value="No recipe have been found"
 						rendered="#{RecipeControlerBean.getNumberRecipe == 0}"
 						style="font:red" />
+						
+					<h:outputText value="some recipes have been found"
+						rendered="#{RecipeControlerBean.getNumberRecipe != 0}"
+						style="font:red" />
+						
+					  -<h:outputText value="#{RecipeControlerBean.getNumberRecipe}" />-
+					  -<h:outputText value="#{RecipeControlerBean.getNumberRecipe}" />-
 					  
 					<ui:repeat value="#{RecipeControlerBean.getAllRecipe}"
 						var="recipe">

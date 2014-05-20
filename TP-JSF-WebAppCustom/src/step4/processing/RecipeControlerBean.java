@@ -24,7 +24,18 @@ public class RecipeControlerBean {
 	private RecipeListModelBean recipeList;
 	
 	public RecipeControlerBean() {
+		System.out.println("coucou");
 		this.recipeDao=DaoFabric.getInstance().createRecipesDao();
+		
+		
+        ExternalContext externalContext = FacesContext.getCurrentInstance()
+                .getExternalContext();
+        Map<String, Object> sessionMap = externalContext.getSessionMap();
+
+        
+        sessionMap.put("test", "plop");
+        
+        
 	}
 	
 
