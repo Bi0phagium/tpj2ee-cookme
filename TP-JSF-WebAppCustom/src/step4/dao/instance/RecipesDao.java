@@ -93,5 +93,165 @@ public class RecipesDao {
 
 		return recipeList;
 	}
+	
+	public RecipeModel getRecipeById(int id) {
+		// Création de la requête
+		java.sql.Statement query;
+
+		try {
+		
+		// create connection
+		connection = java.sql.DriverManager.getConnection("jdbc:mysql://"
+				+ dB_HOST + ":" + dB_PORT + "/" + dB_NAME, dB_USER, dB_PWD);
+
+			// Creation de l'élément de requète
+			query = connection.createStatement();
+
+			// Executer puis parcourir les résultats
+			//attention avec les injections
+			java.sql.ResultSet rs = query
+					.executeQuery("SELECT * FROM recipe where id="+id+";");
+			while (rs.next()) {
+				// Création de  la recette
+				RecipeModel recipe = new RecipeModel(
+						rs.getString("title"), rs.getString("description"),
+						rs.getInt("expertise"), rs.getInt("duration"),
+						rs.getInt("nbpeople"), rs.getString("type"));
+				System.out.println("Recipe : " + recipe);
+
+				rs.close();
+				query.close();
+				connection.close();
+			
+				return recipe;
+			}
+			rs.close();
+			query.close();
+			connection.close();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return null;
+	}
+	
+	/*
+	
+	public ArrayList<RecipeModel> searchRecipes() {
+		ArrayList<RecipeModel> recipeList = new ArrayList<RecipeModel>();
+
+		// Création de la requête
+		java.sql.Statement query;
+
+		try {
+		
+		// create connection
+		connection = java.sql.DriverManager.getConnection("jdbc:mysql://"
+				+ dB_HOST + ":" + dB_PORT + "/" + dB_NAME, dB_USER, dB_PWD);
+
+			// Creation de l'élément de requète
+			query = connection.createStatement();
+
+			// Executer puis parcourir les résultats
+			//nécessite une vérification pour empecher les injections SQL
+			String requete = "SELECT * FROM recipe where 1";
+			if(recipe.getTitre()!=null){
+				requete = requete.concat(" and titre=\""+recipe.getTitre()+"\"");
+			}
+			if(recipe.getExpertise()!=null){
+				requete = requete.concat(" and expertise=\""+recipe.getExpertise()+"\"");
+			}
+			if(recipe.getNbpeople()!=null){
+				requete = requete.concat(" and nbpeople <= "+recipe.getNbpeople());
+			}
+			if(recipe.getDuration()!=null){
+				requete = requete.concat(" and duration <= "+recipe.getDuration());
+			}
+			if(recipe.getType()!=null){
+				requete = requete.concat(" and type=\""+recipe.getType()+"\"");
+			}
+			requete = requete.concat(";");
+			
+			
+			
+			java.sql.ResultSet rs = query
+					.executeQuery(requete);
+					
+			while (rs.next()) {
+				// Création de  la recette
+				RecipeModel recipe = new RecipeModel(
+						rs.getString("title"), rs.getString("description"),
+						rs.getInt("expertise"), rs.getInt("duration"),
+						rs.getInt("nbpeople"), rs.getString("type"));
+				System.out.println("Recipe : " + recipe);
+
+				// ajout de la recette récupérée à la liste
+				recipeList.add(recipe);
+			}
+			rs.close();
+			query.close();
+			connection.close();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return recipeList;
+	}
+	
+	
+	public ArrayList<RecipeModel> updateRecipes(int id, RecipeModel recipe) {	
+
+		// Création de la requête
+		java.sql.Statement query;
+
+		try {
+		
+		// create connection
+		connection = java.sql.DriverManager.getConnection("jdbc:mysql://"
+				+ dB_HOST + ":" + dB_PORT + "/" + dB_NAME, dB_USER, dB_PWD);
+
+			// Creation de l'élément de requète
+			query = connection.createStatement();
+
+			// Executer puis parcourir les résultats
+			//nécessite une vérification pour empecher les injections SQL
+			String requete = "SELECT recipe ";
+			if(recipe.getTitre()!=null){
+				requete = requete.concat(" set titre=\""+recipe.getTitre()+"\"");
+			}
+			if(recipe.getExpertise()!=null){
+				requete = requete.concat(" set expertise=\""+recipe.getExpertise()+"\"");
+			}
+			if(recipe.getNbpeople()!=null){
+				requete = requete.concat(" set nbpeople <= "+recipe.getNbpeople());
+			}
+			if(recipe.getDuration()!=null){
+				requete = requete.concat(" set duration <= "+recipe.getDuration());
+			}
+			if(recipe.getType()!=null){
+				requete = requete.concat(" set type=\""+recipe.getType()+"\"");
+			}
+			
+			requete = requete.concat(" where id="+id+";");
+			
+			
+			
+			java.sql.ResultSet rs = query
+					.executeQuery(requete);
+				
+			rs.close();
+			query.close();
+			connection.close();
+			return true;
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return false;
+	}
+	*/
 
 }

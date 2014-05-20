@@ -70,5 +70,19 @@ public class RecipeControlerBean {
 		return this.recipeList.getNumRecipe();
 		
 	}
+	/*
+	public int getRecipeById(int id){
+		return this.recipeList.getRecipeById(id);
+		
+	}
+
+	public List<RecipeModel> searchRecipe(RecipeModel recipe){
+		return this.recipeDao.searchRecipes(recipe);
+	}
+
+	public boolean updateRecipe(int id, RecipeModel recipe){
+		return this.recipeDao.updateRecipes(id, recipe);
+	}
+	*/
 
 }
